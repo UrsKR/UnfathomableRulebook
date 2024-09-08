@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dynamic BSG rulebook
+title: Dynamic Unfathomable rulebook
 toc: true
 toc_stop_autofire: true
 ---
