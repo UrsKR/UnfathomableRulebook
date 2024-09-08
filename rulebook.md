@@ -517,11 +517,7 @@ $(function () {
 <div class="help" markdown="1">
 ## Help
 
-Use the checkboxes and menus above to select a configuration of Battlestar Galactica expansions, modules, and variants. Some items might be disabled if they conflict with another selected option. 
-
-### All endings
-
-Many variants exist that add *all* the endings to the game. None of them are included here, but you can still use this rulebook for such a game by selecting "all endings". This will show all of the official rules for every ending. Whichever variant you are using will tell you how to proceed through all the endings, but when you need to resolve "normal" gameplay events and issues they will be available.
+Use the checkboxes and menus above to select a configuration of Unfathomable expansions, modules, and variants. Some items might be disabled if they conflict with another selected option. 
 
 ### Agendas and Motives
 
@@ -570,21 +566,32 @@ Some game mechanics depend on the Exodus version, like Personal Goal cards and s
 
 ## Introduction
 
-This rulebook is intended to be a single resource for the official rules of [Battlestar Galactica by Fantasy Flight Games](https://www.fantasyflightgames.com/en/products/battlestar-galactica/), including its 3 expansions. The goals are for it to be complete and unambiguous, incorporating the published rules included with the games as well as clarifications and rulings made later, so that no one has to dig through 4 rulebooks, errata, official FAQs, [unofficial FAQs](https://boardgamegeek.com/wiki/page/Battlestar_Galactica_FAQ), and rulings by FFG employees in response to customer questions. 
+This rulebook is intended to be a single resource for the official rules of [Unfathomable by Fantasy Flight Games](https://www.fantasyflightgames.com/en/unfathomable/) and its expansion. The goals are for it to be complete and unambiguous, incorporating the published rules included with the games as well as clarifications and rulings made later, so that no one has to dig through rulebooks, reference, errata, official FAQs and other resources.
 
 For beginning players, it's probably best to use the official base game rulebook to learn the game. This rulebook has lots of detail, even when all the expansions are turned off, which is probably going to hurt more than help. But if you are playing the game and have a question that the official rulebook doesn't seem to answer, take a look. An experienced player should be able to use this to teach new players the game, since they can explain the basics themselves and know what details can be ignored to start. 
 
-Configure which expansions and options are being included by using the form at the top of the page. Some rules change based on which expansions or options are included, and the rulebook will change as you configure it. 
+Configure which rules are being included by using the form at the top of the page. Some rules change based what is included, and the rulebook will change as you configure it. 
 
-By default, this rulebook sticks to the official rules and rulings by Fantasy Flight Games. However, some options are available for variants, including one by Alexander DeSouza called "Allies for All Seasons" which pulls in the "ally" mechanic without the rest of the Ionian Nebula ending. 
+By default, this rulebook sticks to the official rules and rulings by Fantasy Flight Games.
 
-## The basics
+## The Setting
 
-Humanity has been decimated in a surprise attack by the Cylons, a race of machines who were created by humans and rebelled against them. After 40 years of peace, the remaining members of the human race are suddenly on the run, fleeing through space and fighting for survival. In the escape, however, it becomes clear that the Cylons have evolved -- there are models that are completely indistinguishable from humans, and some don't even *know* that they are Cylons.
+The year is 1913.  
+You are the passengers and crew aboard the steamship SS Atlantica, a small passenger ship operated by Fairmont Shipping Co. that is traveling across the Atlantic Ocean en route to Boston, Massachusetts. During the first days of the voyage, there are rumors that the lookouts have spotted large, dark shapes in the water following behind the ship. Some of the ship’s occupants have been behaving strangely, making croaking sounds or staring unblinkingly at the open sea. You, too, are not feeling quite yourself, your nights plagued by dreams of eerie underwater landscapes teeming with shadowy figures. Tensions are high, nerves are frayed, and the ship is a powder keg ready
+to explode.  
 
-During the game, the human fleet will attempt to escape the pursuing Cylons, moving toward the final objective in a series of faster-than-light jumps. The humans have re-formed their government and what's left of the military still follows a chain of command... but can those in authority be trusted?
+On the third night of the seven-day voyage, a passenger is found murdered in the ship’s chapel. Her body is slumped over an ancient tome with ritual components laid out around her on the chapel’s altar. An illustration on the open page of the tome depicts a figure in the center of a shimmering circle. Outside of the circle is a swarm of fleeing monsters. You do not have long to contemplate the meaning of the image before
+cries and screams of horror go up around the ship. Something has emerged from the water and is climbing aboard!
 
-Each player will select a character and be dealt Loyalty cards. Characters have different skills and abilities, and a well-balanced team of players will help the humans succeed and survive. Players take turns, where they can draw cards, move, and take an action, but at the end of each turn all players must deal with a crisis. It could be a surprise Cylon attack, or a dilemma with no clear answer. All this time, some players are secretly Cylons, or may become Cylons partway through the game, so trust is a critical factor. A hidden Cylon could choose to sabotage at a critical moment, or cause infighting amongst the humans. Cylons can also choose to reveal themselves, causing damage along the way and allowing the Cylon to openly fight the humans. 
+## Overview
+Unfathomable is a game of hidden loyalties, intrigue, and paranoia for three to six players. Some players are humans who are
+fighting for the survival of the ship, its passengers, and its crew. But some players are traitors, sent aboard the SS Atlantica by the Deep
+Ones to ensure the ship never reaches port! Because player loyalties are hidden, determining who is friend and who is foe is critical to
+winning in Unfathomable. 
+
+During the game, the human players arm themselves with items, fight Deep Ones, rescue passengers, and make sure that the ship stays afloat. At the end of every human player’s turn is a crisis that either poses a difficult decision for one player or challenges all players to work together to overcome the crisis. If the humans can work together successfully, the ship will eventually reach port, resulting in a win for the humans.  
+
+However, the traitors are hiding among the humans, secretly sabotaging the ship and doing all they can to ensure its doom. If the ship sinks before it can reach its final destination, the traitors win.
 
 ### Strategy
 
@@ -645,6 +652,29 @@ Characters in the Brig still draw Crisis cards.
 </div>
 
 ## Game setup
+
+1. **Game Board**: Place the game board in the center of the table.
+2. **Set Tracks**: Place the travel and ritual track tokens on the Start space of their respective tracks.
+3. **Set Dials**: Set each resource dial to its starting value of 8.
+4. **Create Supply**: Place the Deep One figures, passenger tokens, traitor rings, and eight-sided die next to the board. Flip all passenger tokens facedown and mix them thoroughly.
+5. **Create Skill Decks**: Separate the skill cards by type (influence, lore, observation, strength, will, and treachery), shuffle each type into its own deck, and place each deck face down beside the game board next to the corresponding label.
+6. **Create Damage and Mythos Decks**: Shuffle the damage deck and place it beside the game board next to its label. Shuffle the mythos deck and place it near the board.
+7. **Place Monsters and Passengers**: Place Father Dagon and Mother Hydra in the Deep. Place six additional Deep Ones and two passenger tokens as follows: 2 Deep Ones in each of sea spaces 1 and 2, 1 Deep Ones in each of deck spaces 1 and 2 and 1 passenger token in each of deck spaces 3 and 4.
+8. **Create Chaos Deck**: Take two cards from each skill deck (except treachery) and, without looking at them, shuffle them together to create the chaos deck. Place the deck in the chaos deck space on the board.
+9. **Select Characters**: Randomly select a player to be the current player and give them the current player token. Then, starting with the current player and proceeding clockwise, each player chooses one character to play and takes that character’s sheet. The “Suggested Characters” sidebar has a list of recommended characters to use for your first game according to the number of players. Return the remaining character sheets to the game box.
+10. **Create Play Areas**: Each player takes the feat card and standee that matches their chosen character as well as a double-sided player
+reference sheet and places them in their play area. Return the remaining feat cards and standees to the game box.
+11. **Gather Items**: Each player takes the starting item listed on the back of their character sheet from the item deck and places it faceup in their play area. Shuffle the remaining items to create the item deck and place it beside the game board next to its label.
+12. **Place Characters**: Each player places the standee for their chosen character in the starting space on the board listed on the back of their character sheet.
+13. **Draw Skill Cards**: Each player except the current player draws the five skill cards listed at the bottom of their chosen character’s sheet. **The current player does not start the game with any cards in hand.**
+14. **Create Waypoint Deck**: Shuffle the waypoint cards and give the deck and the Captain title card to the player with the
+character who is highest on the Captain Line of Succession list (provided on the 14 back of the Captain title card).
+15. **Create Spell Deck**: Shuffle the spell cards and give the deck and the Keeper of the Tome title card to the player with the character who is highest on the Keeper Line of Succession list (provided on the back of the Keeper of the Tome title card).
+16. **Create Loyalty Deck**: Create the loyalty deck by combining the loyalty cards listed below according to the number of players.
+||Player Count|| 3 || 4 || 5 || 6 ||
+====================================
+|| Hybrid Loyalty Cards || 1 || 1 || 2 || 2 ||
+|| Human Loyalty Cards || 5 || 7 || 8 || 10
 
 ### Game board
 Setting up the game board is fairly straightforward. The resource dials are set to their defaults, skill cards go next to their respective spaces on the bottom, vipers and raptors go in the reserves, and the fleet marker goes on the jump track. All other components and decks are placed somewhere near the board for use later. The Skill card discard piles are face-up next to *each* Skill draw pile. 
