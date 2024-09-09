@@ -412,9 +412,6 @@ $(function () {
   <fieldset id="configbox">
     <legend>Configuration:</legend>
     <label><input type="checkbox" name="abyss" id="abyss"> From The Abyss</label><br>
-      <div style="margin-left: 20px" class="pegasus">
-        <label><input type="checkbox" name="forceexodus" id="forceexodus"> Variant: use "extra card" style Loyalty deck from Exodus</label>
-      </div>
     <label>Player Count:
       <select id="playercount">
         <option value="3" id="players3" selected>3</option>
@@ -423,6 +420,8 @@ $(function () {
         <option value="6" id="players6">6</option>
       </select>
     </label>
+    <hr>
+    <label><input type="checkbox" name="firstgame" id="firstgame">Variant: First Game limitations</label><br>
     <hr>
     <label>Share this configuration: 
       <input style="width: 100%;" type="text" id="generatedUrl" name="generatedUrl" />
