@@ -58,7 +58,7 @@ function validateForm() {
   } else {
     enable('#firstgame');
   }
-  if ( readCheckbox('#firstgame') ) {
+  if (readCheckbox('#firstgame')) {
     forbidCheckbox('#abyss');
   } else {
     enable('#abyss');
@@ -103,14 +103,14 @@ function flipSwitches () {
     }
   });  
   
-  if (readCheckbox('#abyss') {
+  if (readCheckbox('#abyss')) {
     showThese.push('expansion');
     hideThese.push('noexpansion');
   } else {
     showThese.push('noexpansion');
     hideThese.push('expansion');
   } 
-  if (readCheckbox('#abyss') {
+  if (readCheckbox('#abyss')) {
     showThese.push('boons');
     hideThese.push('noboons');
   } else {
