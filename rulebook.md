@@ -49,101 +49,20 @@ function forbidMenu(id) {
 }
 
 function validateForm() {
-  if (readCheckbox('#pegasus')) {
-    enable('#newcaprica');
-    enable('#forceexodus');
+  enable('#players3');
+  enable('#players4');
+  enable('#players5');
+  enable('#players6');	
+  if (readCheckbox('#abyss')) {
+    forbidCheckbox('#firstgame');
   } else {
-    forbidCheckbox('#forceexodus');
-    forbidMenu('#newcaprica');
+    enable('#firstgame');
   }
-  // Exodus checkboxes only allowed with Exodus.
-  if ( readCheckbox('#exodus') ) {
-    // Enable those boxes
-    enable('#personalgoal');
-    enable('#finalfive');
-    enable('#cylonfleet');
-    enable('#forcepegasus');
-    enable('#ioniannebula');
+  if ( readCheckbox('#firstgame') ) {
+    forbidCheckbox('#abyss');
   } else {
-    // Disable them and also make sure they're not checked.
-    forbidCheckbox('#personalgoal');
-    forbidCheckbox('#finalfive');
-    forbidCheckbox('#cylonfleet');
-    forbidCheckbox('#forcepegasus');
-    forbidMenu('#ioniannebula');
+    enable('#abyss');
   }
-  if ( $('#ioniannebula').is(':selected')
-       || $('#allendings').is(':selected')
-       || ! readCheckbox('#exodus') ) {
-    forbidCheckbox('#allyseasons');
-  } else {
-    enable('#allyseasons');
-  }
-  
-  // Loyalty deck styles only apply in certain scenarios
-  if ($('#ioniannebula').is(':selected')
-       || readCheckbox('#allyseasons') 
-       || readCheckbox('#personalgoal')) {
-     // Exodus style is required.
-     forbidCheckbox('#forcepegasus');
-     forbidCheckbox('#forceexodus');
-   }
-  
-  if (readCheckbox('#forceexodus')) {
-    // Obviously can't have both on at the same time
-    forbidCheckbox('#forcepegasus');
-  } else if (readCheckbox('#forcepegasus') || readCheckbox('#exodus')) {
-    // Also, no point in "forcing" Exodus if it's already on
-    forbidCheckbox('#forceexodus');
-  }
-  
-  if (readCheckbox('#daybreak')) {
-    enable('#searchforhome');
-    if ( ! $('#searchforhome').is(':selected')
-         && ! $('#allendings').is(':selected')) {
-      enable('#forcedemetrius');
-    } else {
-      forbidCheckbox('#forcedemetrius');
-    }
-  } else {
-    forbidMenu('#searchforhome');
-    forbidCheckbox('#forcedemetrius');
-  }
-  if (readCheckbox('#pegasus') || readCheckbox('#daybreak')) {
-    enable('#cylonleader');
-  } else {
-    forbidCheckbox('#cylonleader');
-  }
-  
-  if (readCheckbox('#cylonleader') || readCheckbox('#daybreak')) {
-    // Sympathizer rules don't apply
-    forbidCheckbox('#nosympathizer');
-    forbidCheckbox('#sympatheticcylon');
-  } else {
-    enable('#nosympathizer');
-    enable('#sympatheticcylon');
-  }
-  if (readCheckbox('#sympatheticcylon')) {
-    forbidCheckbox('#nosympathizer');
-  } else if (readCheckbox('#nosympathizer')) {
-    forbidCheckbox('#sympatheticcylon');
-  }
-  
-  if (! readCheckbox('#daybreak') &&
-        (readCheckbox('#cylonleader') || readCheckbox('#sympatheticcylon'))) {
-    // Agenda cards are possible, might want to override
-    enable('#forcemotive');
-  } else {
-    forbidCheckbox('#forcemotive');
-  }
-  
-  if (readCheckbox('#daybreak') || readCheckbox('#pegasus')
-      || readCheckbox('#sympatheticcylon')) {
-    forbidCheckbox('#forceoverlay');  
-  } else {
-    enable('#forceoverlay');
-  }
-  
 }
 
 function highlight(theClass) {
@@ -184,92 +103,45 @@ function flipSwitches () {
     }
   });  
   
-  if (readCheckbox('#daybreak') 
-      || readCheckbox('#pegasus')
-      || readCheckbox('#exodus')) {
+  if (readCheckbox('#abyss') {
     showThese.push('expansion');
     hideThese.push('noexpansion');
   } else {
     showThese.push('noexpansion');
     hideThese.push('expansion');
-  }
-  
-  if (readCheckbox('#pegasus') || readCheckbox('#exodus')) {
-    showThese.push('execution');
-    hideThese.push('noexecution');
+  } 
+  if (readCheckbox('#abyss') {
+    showThese.push('boons');
+    hideThese.push('noboons');
   } else {
-    showThese.push('noexecution');
-    hideThese.push('execution');
+    showThese.push('noboons');
+    hideThese.push('boons');
   }
-
-  // Exodus loyalty if either:
-  //    Exodus is enabled, and hasn't been forced off
-  //    Or we've forced Exodus rules to be on
-  if ( (readCheckbox('#exodus') && ! readCheckbox('#forcepegasus'))
-       || readCheckbox('#forceexodus')) {
-    showThese.push('exodusloyalty');
-    hideThese.push('noexodusloyalty');
-  } else {
-    showThese.push('noexodusloyalty');
-    hideThese.push('exodusloyalty');
-  }
-  
-  if (readCheckbox('#daybreak') || readCheckbox('#pegasus')) {
-    showThese.push('treachery');
-    hideThese.push('notreachery');
-  } else {
-    showThese.push('notreachery');
-    hideThese.push('treachery');
-  }
-  
-  if (readCheckbox('#cylonleader') || readCheckbox('#sympatheticcylon')) {
-    showThese.push('infiltrator');
-    hideThese.push('noinfiltrator');
-    if (readCheckbox('#daybreak') || readCheckbox('#forcemotive')) {
-      showThese.push('motive');
-      hideThese.push('agenda');
-    } else {
-      showThese.push('agenda');
-      hideThese.push('motive');
-    }
-  } else {
-    showThese.push('noinfiltrator');
-    hideThese.push('infiltrator');
-    hideThese.push('agenda');
-    hideThese.push('motive');
-  }
-
-  
-  if (readCheckbox('#ioniannebula') 
-       || readCheckbox('#allendings')
-       || readCheckbox('#allyseasons')) {
-    showThese.push('allies');
-    hideThese.push('noallies');
-  } else {
-    showThese.push('noallies');
-    hideThese.push('allies');
-  }
-  
-  if (readCheckbox('#pegasus') || readCheckbox('#daybreak')
-      || readCheckbox('#sympatheticcylon')
-      || readCheckbox('#forceoverlay')) {
-    showThese.push('overlay');
-    hideThese.push('nooverlay');  
-  } else {
-    showThese.push('nooverlay');
-    hideThese.push('overlay');
-  }
-  
-  if (readCheckbox('#searchforhome')
-        || readCheckbox('#forcedemetrius')
-        || readCheckbox('#allendings')) {
-    showThese.push('demetrius');
-    hideThese.push('nodemetrius');
-  } else {
-    showThese.push('nodemetrius');
-    hideThese.push('demetrius');
-  }
-  
+  if (readCheckbox('#players3')) {
+    showThese.push('players3');
+    hideThese.push('players4');
+    hideThese.push('players5');
+    hideThese.push('players6');
+  } 
+  if (readCheckbox('#players4')) {
+    hideThese.push('players3');
+    showThese.push('players4');
+    hideThese.push('players5');
+    hideThese.push('players6');
+  } 
+  if (readCheckbox('#players5')) {
+    hideThese.push('players3');
+    hideThese.push('players4');
+    showThese.push('players5');
+    hideThese.push('players6');
+  } 
+  if (readCheckbox('#players6')) {
+    hideThese.push('players3');
+    hideThese.push('players4');
+    hideThese.push('players5');
+    showThese.push('players6');
+  } 
+	
   // Step 3: Show all the classes that need showing. 
   for (i in showThese) {
     $('.'+showThese[i]).show();
@@ -619,11 +491,23 @@ reference sheet and places them in their play area. Return the remaining feat ca
 14. **Create Waypoint Deck**: Shuffle the waypoint cards and give the deck and the Captain title card to the player with the
 character who is highest on the Captain Line of Succession list (provided on the 14 back of the Captain title card).
 15. **Create Spell Deck**: Shuffle the spell cards and give the deck and the Keeper of the Tome title card to the player with the character who is highest on the Keeper Line of Succession list (provided on the back of the Keeper of the Tome title card).
-16. **Create Loyalty Deck**: Create the loyalty deck by combining the loyalty cards listed below according to the number of players.
-||Player Count|| 3 || 4 || 5 || 6 ||
-====================================
-|| Hybrid Loyalty Cards || 1 || 1 || 2 || 2 ||
-|| Human Loyalty Cards || 5 || 7 || 8 || 10
+16. **Create Loyalty Deck**: Create the loyalty deck by combining the loyalty cards listed below:
+    <ul class="players3">
+	<li>1 Hybrid Loyalty Card</li>
+        <li>5 Human Loyalty Cards</li>
+    </ul>
+    <ul class="players4">
+	<li>1 Hybrid Loyalty Card</li>
+        <li>7 Human Loyalty Cards</li>
+    </ul>
+    <ul class="players5">
+	<li>2 Hybrid Loyalty Card</li>
+        <li>8 Human Loyalty Cards</li>
+    </ul>
+    <ul class="players6">
+	<li>2 Hybrid Loyalty Card</li>
+        <li>10 Human Loyalty Cards</li>
+    </ul>
 
 ### Game board
 Setting up the game board is fairly straightforward. The resource dials are set to their defaults, skill cards go next to their respective spaces on the bottom, vipers and raptors go in the reserves, and the fleet marker goes on the jump track. All other components and decks are placed somewhere near the board for use later. The Skill card discard piles are face-up next to *each* Skill draw pile. 
