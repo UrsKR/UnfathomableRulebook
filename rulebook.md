@@ -84,15 +84,10 @@ function flipSwitches () {
   
   // Step 2: Collect lists of classes to hide and show.
   var showThese = [];
-  var hideThese = [];
+  var hideThese = 
   var pullFrom = 'input,option';
-  if (readCheckbox('#allendings')) {
-    // Actually, don't read the endings, we'll do that now.
-    pullFrom = 'input';
-    showThese = ['allendings', 'kobol', 'newcaprica', 'ioniannebula', 'searchforhome'];
-    hideThese = ['noallendings', 'nokobol', 'nonewcaprica', 'noioniannebula', 'nosearchforhome'];
-  }
-  
+  showThese.push('basics');
+  showThese.push('setup');
   $(pullFrom).each(function(index, element) {
     if ($(this).is(':checked')) {
       showThese.push($(this).attr('id'));
@@ -325,6 +320,7 @@ $(function () {
   </fieldset>
 </form>
 
+<div class="basics" markdown="1">
 ## Introduction
 
 This rulebook is intended to be a single resource for the official rules of [Unfathomable by Fantasy Flight Games](https://www.fantasyflightgames.com/en/unfathomable/) and its expansion. The goals are for it to be complete and unambiguous, incorporating the published rules included with the games as well as clarifications and rulings made later, so that no one has to dig through rulebooks, reference, errata, official FAQs and other resources.
@@ -353,9 +349,9 @@ winning in Unfathomable.
 During the game, the human players arm themselves with items, fight Deep Ones, rescue passengers, and make sure that the ship stays afloat. At the end of every human player’s turn is a crisis that either poses a difficult decision for one player or challenges all players to work together to overcome the crisis. If the humans can work together successfully, the ship will eventually reach port, resulting in a win for the humans.  
 
 However, the traitors are hiding among the humans, secretly sabotaging the ship and doing all they can to ensure its doom. If the ship sinks before it can reach its final destination, the traitors win.
+</div>
 
-<div>
-	
+<div class="setup" markdown="1">
 ## Game setup
 
 1. **Game Board**: Place the game board in the center of the table.
